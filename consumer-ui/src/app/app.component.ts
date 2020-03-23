@@ -19,7 +19,7 @@ export class AppComponent {
   private allMachines = [];
 
   constructor(private poNotification: PoNotificationService) {
-    const ws = new WebSocketConnector("http://192.168.6.102:8081/socket", "machinesCreated", this.onMessage.bind(this));
+    const ws = new WebSocketConnector("http://localhost:8081/socket", "machinesCreated", this.onMessage.bind(this));
   }
 
   onMessage(message: Stomp.Message): void {
