@@ -7,7 +7,7 @@ import { Machine } from './machine.model';
 @Injectable({ providedIn: 'root' })
 export class MachineService {
 
-    private api: string = "http://192.168.6.102:8080/api/machines";
+    private api: string = "http://localhost:8080/api/machines";
 
     constructor(private httpClient: HttpClient) { }
 
