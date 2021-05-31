@@ -13,7 +13,12 @@ export class AppComponent {
   machine: Machine;
 
   constructor(private machineService: MachineService) {
-    this.clear();
+    this.machine = {
+      brand: "volkswagen",
+      model: "polo",
+      fabricationYear: "2020"
+    };
+    // this.clear();
   }
 
   private clear() {
@@ -25,6 +30,8 @@ export class AppComponent {
   }
 
   public save() {
-    this.machineService.create(this.machine).subscribe(response => this.clear());
+    this.machineService.create(this.machine).subscribe(
+      // response => this.clear()
+      );
   }
 }
